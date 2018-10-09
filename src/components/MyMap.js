@@ -13,7 +13,8 @@ const MyMapComponent = withScriptjs(
         props.markers.filter(marker => marker.isVisible).map((marker, idx) => { 
             const venueInfo = props.venues.find(venue => venue.id === marker.id);
                 return (
-                    <Marker 
+                    <Marker
+                      animation={window.google.maps.Animation.DROP}   
                       key={idx} 
                       position={{ lat: marker.lat, lng: marker.lng }}
                       onClick={() => props.handleMarkerClick(marker)}
