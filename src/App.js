@@ -28,7 +28,7 @@ class App extends Component {
     console.log(marker)
     marker.isOpen = true;
     this.setState({markers: Object.assign(this.state.markers, marker)})
-
+   
     const venue = this.state.venues.find(venue => venue.id === marker.id);
 
     FourSquare.getVenueDetails(marker.id).then(res => {
