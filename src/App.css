@@ -1,7 +1,72 @@
-.App {
+/* Forrest Code - .App height, width, flexbox, sidebar
+
+.App {   
   text-align: center;
+  height: 100vh; 
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  .sideBar {
+    width: 25%;
+    #search {
+      width: 100%;
+      height: 2rem;
+      font-size: 1rem; 
+    }
+    .venueList {
+      padding: 1rem;
+      .listItem {
+        list-style: none;
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        background: #5757fe;
+        color: white;
+        display:flex;
+        align-items: center;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }  
+}
+I couldn't get the above code to work and had to break it up below */
+.App {   
+  text-align: center;
+  height: 100vh; 
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
+.sideBar {
+  width: 25%;
+}  
+
+#search {
+    width: 100%;
+    height: 2rem;
+    font-size: 1rem; 
+}  
+
+.venueList {
+  padding: 1rem;
+}
+
+.listItem {
+  list-style: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  background: #5757fe;
+  color: white;
+  display:flex;
+  align-items: center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* resume code from create react app below */
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;

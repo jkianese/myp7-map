@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import MyMap from './components/MyMap'
-import FourSquare from './api/FourSquare'
+import MyMap from './components/MyMap';
+import FourSquare from './api/FourSquare';
+import SideBar from './components/SideBar';
 
 class App extends Component {
 
@@ -38,6 +39,12 @@ class App extends Component {
     });  
   }
 
+  handleListItemClick = venue => {
+    const marker = this.state.markers.find(marker => marker.id === venue.id);
+    this.handleMarkerClick(marker); 
+  }
+
+
   componentDidMount(){
     FourSquare.search({
       near: "Pittsburgh",
@@ -63,6 +70,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SideBar {...this.state} handleListItemClick={this.handleListItemClick} />
         <MyMap { ...this.state} handleMarkerClick={this.handleMarkerClick} />
       </div>  
     );
