@@ -48,7 +48,7 @@ export default class MyMap extends Component {
             <MyMapComponent
                 {...this.props}
                 isMarkerShown  // Appears like this was remove Video #4 3:50 
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBj5AzHYC1kUPRnvaT6G6zsAONHSpKmoqQ"
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key="
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `100%`, width: '75%' }} />} // Can I do this in CSS?
                 mapElement={<div style={{ height: `100%` }} />}
